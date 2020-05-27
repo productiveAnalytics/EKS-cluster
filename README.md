@@ -1,6 +1,13 @@
 # EKS-cluster
 Setting AWS EKS cluster using eksctl, kubectl and aws-iam-authenticatorRefer: https://eksctl.io
 
+YouTube videos :
+| # |      Video                                   |  Topic                            |
+|--:|:--------------------------------------------:|:----------------------------------|
+| 1 | https://www.youtube.com/watch?v=VMJa0-uJKhE  | Architecture                      |
+| 2 | https://www.youtube.com/watch?v=hUeGe2ArYZg  | Service types and Networking      |
+| 3 | https://www.youtube.com/watch?v=5VpK61DqBvw  | Advanced Security & DevOps/GitOps |
+
 #=== Setup of EKS ctl, Kube ctl and aws-iam-authenticator ===#
 # Go to the folder
 cd ~/opt/EKSctl
@@ -21,6 +28,7 @@ chmod +x kubectl
 
 # Download aws-iam-authenticator : https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
 curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.13.7/2019-06-11/bin/linux/amd64/aws-iam-authenticator
+
 # Access
 chmod +x aws-iam-authenticator
 
