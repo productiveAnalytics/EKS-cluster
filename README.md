@@ -2,11 +2,12 @@
 Setting AWS EKS cluster using eksctl, kubectl and aws-iam-authenticatorRefer: https://eksctl.io
 
 YouTube videos :
-| # |      Video                                   |  Topic                            |
-|--:|:--------------------------------------------:|:----------------------------------|
-| 1 | https://www.youtube.com/watch?v=VMJa0-uJKhE  | Architecture                      |
-| 2 | https://www.youtube.com/watch?v=hUeGe2ArYZg  | Service types and Networking      |
-| 3 | https://www.youtube.com/watch?v=5VpK61DqBvw  | Advanced Security & DevOps/GitOps |
+| # |      Video                                   |  Topic                                |
+|--:|:--------------------------------------------:|:--------------------------------------|
+| 1 | https://www.youtube.com/watch?v=VMJa0-uJKhE  | Architecture                          |
+| 2 | https://www.youtube.com/watch?v=hUeGe2ArYZg  | Service types and Networking          |
+| 3 | https://www.youtube.com/watch?v=5VpK61DqBvw  | Advanced Security & DevOps/GitOps     |
+| 4 | https://www.youtube.com/watch?v=p6xDCz00TxU  | Quick cluster setup w/ EKSctl (MacOS) |
 
 #=== Setup of EKS ctl, Kube ctl and aws-iam-authenticator ===#
 # Go to the folder
