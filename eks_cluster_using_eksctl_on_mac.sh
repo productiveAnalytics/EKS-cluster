@@ -17,6 +17,6 @@ eksctl create cluster \
 --name laap-eks-ue1-test-cluster-sbx \
 --version ${EKS_SUPPORTED_K8S_VERSION} \
 --region us-east-1 \
---nodegroup laap-k8s-nodes \
+--nodegroup-name laap-k8s-nodes \
 --node-type t2.micro \
 --nodes 3
