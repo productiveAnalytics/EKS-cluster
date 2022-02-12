@@ -25,3 +25,10 @@ eksctl create cluster \
 eksctl utils describe-stacks \
 --region=us-east-1 \
 --cluster=laap-eks-ue1-test-cluster-sbx
+
+# To enable CloudWatch events for EKS cluster
+eksctl utils update-cluster-logging \
+--enable-types=all \
+--region=us-east-1 \
+--cluster=laap-eks-ue1-test-cluster-sbx \
+--approve
