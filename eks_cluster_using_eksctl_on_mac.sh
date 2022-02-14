@@ -34,7 +34,8 @@ eksctl create cluster \
 --instance-prefix my_eks \
 --vpc-private-subnets  <PUT_VPC_Private_Subnect_IDs> \
 --enable-ssm \
---asg-access
+--asg-access \
+--alb-ingress-access
 
 # Complex cluster with Auto Scaler, and in existing private subnets of VPC and Fargate based nodes
 eksctl create cluster \
@@ -50,6 +51,7 @@ eksctl create cluster \
 --vpc-private-subnets  <PUT_VPC_Private_Subnect_IDs> \
 --enable-ssm \
 --asg-access \
+--alb-ingress-access \
 --fargate
 
 # To check the stack
@@ -68,7 +70,9 @@ eksctl utils update-cluster-logging \
 # Run KubeCtl commands, like
 kubectl get nodes
 kubectl get ns
-kubectl get pod
+kubectl get deployments
+kubectl get services
+kubectl get pod --all-namespaces -o wide
 
 # TO CLEAN-UP
 # eksctl delete cluster --name ${EKS_CLUSTER_NAME}
