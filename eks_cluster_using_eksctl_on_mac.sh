@@ -16,7 +16,8 @@ aws sts get-caller-identity
 
 # Create cluster with supported Kubernetes version
 export EKS_SUPPORTED_K8S_VERSION=1.21
-export EKS_CLUSTER_NAME=laap-eks-ue1-test-cluster-sbx
+export EKS_ENV_NAME=sbx
+export EKS_CLUSTER_NAME=laap-eks-ue1-test-cluster-${EKS_ENV_NAME}
 export EKS_MIN_NODES=3
 export EKS_MAX_NODES=5
 
