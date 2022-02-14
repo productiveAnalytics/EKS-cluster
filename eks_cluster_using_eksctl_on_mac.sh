@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# REFER: https://github.com/weaveworks/eksctl/tree/main/examples
+echo 'REFER: https://github.com/weaveworks/eksctl/tree/main/examples'
+
 # Update homebrew to get EKSCtl
 brew tap weaveworks/tap
 brew install weaveworks/tap/eksctl
