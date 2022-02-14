@@ -29,7 +29,11 @@ eksctl create cluster \
 --nodegroup-name laap-k8s-ec2-nodes \
 --node-type t2.micro \
 --node-ami-family Ubuntu2004 \
---nodes 3
+--nodes 3 \
+--instance-prefix my_eks \
+--vpc-private-subnets  <PUT_VPC_Private_Subnect_IDs> \
+--enable-ssm \
+--asg-access
 
 # Complex cluster with Auto Scaler, and in existing private subnets of VPC and Fargate based nodes
 eksctl create cluster \
