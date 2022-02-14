@@ -25,7 +25,8 @@ export EKS_MAX_NODES=5
 eksctl create cluster \
 --name ${EKS_CLUSTER_NAME} \
 --tags author=ProductiveAnalytics,usage=test,node_style=ec2 \
---region us-east-1
+--region us-east-1 \
+--zones us-east-1a,us-east-1b,us-east-1c
 
 # EC2-based cluster, with static ASG and in existing private subnets of VPC 
 eksctl create cluster \
