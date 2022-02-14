@@ -21,7 +21,13 @@ export EKS_CLUSTER_NAME=laap-eks-ue1-test-cluster-${EKS_ENV_NAME}
 export EKS_MIN_NODES=3
 export EKS_MAX_NODES=5
 
-# Simple cluster with static ASG and in new VPC and nodes as EC2
+# Simple EC2-based cluster that gets created in NEW VPC
+eksctl create cluster \
+--name ${EKS_CLUSTER_NAME} \
+--tags author=ProductiveAnalytics,usage=test,node_style=ec2 \
+--region us-east-1
+
+# EC2-based cluster, with static ASG and in existing private subnets of VPC 
 eksctl create cluster \
 --name ${EKS_CLUSTER_NAME} \
 --tags author=ProductiveAnalytics,usage=test,node_style=ec2 \
@@ -37,7 +43,7 @@ eksctl create cluster \
 --asg-access \
 --alb-ingress-access
 
-# Complex cluster with Auto Scaler, and in existing private subnets of VPC and Fargate based nodes
+# Fargate-based cluster, with Auto Scaler, and in existing private subnets of VPC
 eksctl create cluster \
 --name ${EKS_CLUSTER_NAME} \
 --tags author=ProductiveAnalytics,usage=test,node_style=fargate \
