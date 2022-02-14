@@ -32,7 +32,7 @@ eksctl create cluster \
 # Complex cluster with Auto Scaler, and in existing private subnets of VPC and Fargate based nodes
 eksctl create cluster \
 --name ${EKS_CLUSTER_NAME} \
---tags author=ProductiveAnalytics usage=test \
+--tags author=ProductiveAnalytics,usage=test \
 --version ${EKS_SUPPORTED_K8S_VERSION} \
 --region us-east-1 \
 --nodegroup-name laap-k8s-nodes \
